@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://clientric.co/sitemap.xml
+
+# Common crawl optimizations
+Allow: /sitemap.xml
+Allow: /robots.txt
+Disallow: /404
+
+# Crawl delay
+Crawl-delay: 1

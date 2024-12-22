@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /404
+
+# *
+User-agent: *
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Host
+Host: https://clientric.co
+
+# Sitemaps
+Sitemap: https://clientric.co/sitemap.xml

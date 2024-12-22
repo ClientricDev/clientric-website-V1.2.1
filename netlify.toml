@@ -1,0 +1,23 @@
+[build]
+  publish = "out"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NEXT_USE_NETLIFY_EDGE = "true"
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-DNS-Prefetch-Control = "on"
+    X-XSS-Protection = "1; mode=block"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob:; font-src 'self' https: data:; connect-src 'self' https:; media-src 'self' https:; object-src 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests;"
+    Cache-Control = "public, max-age=31536000"
